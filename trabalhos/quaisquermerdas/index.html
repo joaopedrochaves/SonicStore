@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Example</title>
+  <style>
+    .item {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .filter-btn {
+      cursor: pointer;
+      margin: 5px;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <button class="filter-btn" onclick="filterItems('all')">All</button>
+    <button class="filter-btn" onclick="filterItems('gamer')">Gamer</button>
+    <button class="filter-btn" onclick="filterItems('manga')">Mangas</button>
+  </div>
+
+  <div class="item gamer">
+    <img src="gamer1.jpg" alt="Gamer 1">
+    <p>Gamer 1</p>
+  </div>
+  <div class="item manga">
+    <img src="manga1.jpg" alt="Manga 1">
+    <p>Manga 1</p>
+  </div>
+  <!-- ... Add more items ... -->
+
+  <script>
+    function filterItems(category) {
+      var items = document.querySelectorAll('.item');
+
+      items.forEach(function(item) {
+        item.style.display = 'none';
+
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'inline-block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

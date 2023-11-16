@@ -1,0 +1,16 @@
+/* Estilo para os itens e botões de filtro */
+.item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .filter-btn {
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+  }
+  
